@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Edinburgh bar / pub The Hebrides / bar in the city centre of Edinburgh / pub near Edinburgh train station / pub near Waverley station Edinburgh">
+    <meta name="description"
+        content="Edinburgh bar / pub The Hebrides / bar in the city centre of Edinburgh / pub near Edinburgh train station / pub near Waverley station Edinburgh">
     <meta name="keywords" content="bar,pub,Edinburgh,hebrides, the hebrides bar, pub in edinburgh, near train station">
     <meta name="author" content="Ivan Dimitrov">
     <title>The Heberdies</title>
@@ -17,11 +18,21 @@
     <link href="css/lightbox.css" rel="stylesheet">
     <script src="js/lightbox.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet"> </script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    </script>
 </head>
 
-<body>
-   <div id="load-screen"><div id="loading">
+<body itemscope itemtype="https://schema.org/BarOrPub">
+
+    <!-- Schema.org meta tags  -->
+    <meta itemprop="address" content="17 Market St, Edinburgh EH1 1DE" />
+    <meta itemprop="acceptsReservations" content="False" />
+    <meta itemprop="currenciesAccepted" content="GBP" />
+    <meta itemprop="paymentAccepted" content="Cash, Credit Card" />
+    <meta itemprop="smokingAllowed" content="False" />
+
+
+    <div id="load-screen"><div id="loading">
        <h1>The Hebrides</h1>
        <h2>Edinburgh bar</h2>
        <img src="images/loading-dots3.gif" width="80px">
@@ -30,8 +41,8 @@
     <header id="Edinburgh_bar">
         <nav class="navigation-bar">
             <div class="nav-container">
-                <div class="logo">
-                    <h1 class="logo-header">the Hebrides</h1>
+                <div class="logo" itemprop="logo">
+                    <h1 class="logo-header" itemprop="name">the Hebrides</h1>
                 </div>
                 <a class="toggle"></a>
                 <ul class="nav-menu">
@@ -48,61 +59,84 @@
                 <video class="video-bg" preload="auto" autoplay="true" loop="loop">
                     <source src="Edinburgh_pub.mp4" type="video/mp4">
                     <source src="Edinburgh_pub.webm" type="video/webm">
-                    <source src="Edinburgh_pub.ogv" type="video/ogg">                    
-                      Sorry, but the video not supported from your browser </video>
+                    <source src="Edinburgh_pub.ogv" type="video/ogg">
+                    Sorry, but the video not supported from your browser </video>
             </div>
             <div class="big-logo-container">
                 <h2 class="small-header">Edinburgh Bar</h2>
-                <h1 class="main-header">The Hebrides</h1> <img src="images/center-figure-3.png" alt="The Hebrides bar logo" id="center-fugure"> </div>
-            <div class="bg-frame"> <img src="images/top-figure-left-3.png" id="figure-top-left" alt=""> <img src="images/top-figure-right-3.png" id="figure-top-right" alt=""> <img src="images/bottom-figure-right-3.png" id="figure-right" alt=""> <img src="images/bottom-figure-left-3.png" id="figure-left" alt=""> </div>
+                <h1 class="main-header">The Hebrides</h1> <img src="images/center-figure-3.png"
+                    alt="The Hebrides bar logo" id="center-fugure">
+            </div>
+            <div class="bg-frame"> <img src="images/top-figure-left-3.png" id="figure-top-left" alt=""> <img
+                    src="images/top-figure-right-3.png" id="figure-top-right" alt=""> <img
+                    src="images/bottom-figure-right-3.png" id="figure-right" alt=""> <img
+                    src="images/bottom-figure-left-3.png" id="figure-left" alt=""> </div>
             <div class="bg-pattern"></div>
-            <div class="scroll-pointer"><a href="#sec2" class="scroll" data-aos="fade-right" data-aos-delay="2000"></a></div>
+            <div class="scroll-pointer"><a href="#sec2" class="scroll" data-aos="fade-right" data-aos-delay="2000"></a>
+            </div>
         </section>
     </header>
     <main>
-        <section class="sec2" id="sec2">
-            <h1 class="events-header">&#xB7; Events &#xB7;</h1>
+        <section class="sec2" id="sec2" itemprop="event" itemscope itemtype="http://schema.org/Event">
+            <meta itemprop="address" content="17 Market St, Edinburgh EH1 1DE" />
+            <meta itemprop="isAccessibleForFree" content="true" />
+            <h1 class="events-header">&#xB7; Events &#xB7;
+            </h1>
             <div class="gallery-top-img"><img src="images/Contact/gallery-top-3.png" alt=""></div>
             <div class="events-wrapper">
-                <div class="event-card mo-event" data-aos="fade-right" data-aos-delay="100">
-                    <h2>MondaY </h2>
-                    <div class="event-img" id="mo-event-img" ></div><!--data-aos="slide-right"-->
-                    <h1>Jazz night</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat molestiae perferendis ipsam quos saepe libero repellendus magnam nihil error tenetur!</p>
-                    <p><span>When:</span>
-                        <br>Every Monday between 9-11pm</p>
+                <div class="event-card mo-event" data-aos="fade-right" data-aos-delay="100" itemprop="event" itemscope
+                    itemtype="http://schema.org/MusicEvent">
+                    <h2>MondaY</h2>
+                    <div class="event-img" id="mo-event-img" itemprop="photo"></div>
+                    <!--data-aos="slide-right"-->
+                    <h1 itemprop="name">Jazz night</h1>
+                    <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span
+                            itemprop="performer">Don Anton </span>Quaerat molestiae perferendis ipsam quos saepe libero
+                        repellendus magnam nihil error tenetur!</p>
+                    <p><span itemprop="startTime" content="T21:00">When:</span>
+                        <br itemprop="duration" content="PT2H">Every Monday between 9-11pm</p>
                 </div>
-                <div class="event-card fr-event" data-aos="fade-left" data-aos-delay="100">
+                <div class="event-card fr-event" data-aos="fade-left" data-aos-delay="100" itemprop="event" itemscope
+                    itemtype="http://schema.org/MusicEvent">
                     <h2>Friday </h2>
-                    <div class="event-img" id="fr-event-img"></div><!-- data-aos="slide-right"-->
-                    <h1>Country night</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat molestiae perferendis ipsam quos saepe libero repellendus magnam nihil error tenetur!</p>
-                    <p><span>When:</span>
-                        <br>Every Friday between 9-11pm</p>
+                    <div class="event-img" id="fr-event-img" itemprop="photo"></div><!-- data-aos="slide-right"-->
+                    <h1 itemprop="name">Country night</h1>
+                    <p itemprop="descriotion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span
+                            itemprop="performer">Amared </span>Quaerat molestiae perferendis ipsam
+                        quos saepe libero repellendus magnam nihil error tenetur!</p>
+                    <p><span itemprop="startTime" content="T21:00">When:</span>
+                        <br itemprop="duration" content="PT2H">Every Friday between 9-11pm</p>
                 </div>
-                <div class="event-card sa-event" data-aos="fade-right" data-aos-delay="100">
+                <div class="event-card sa-event" data-aos="fade-right" data-aos-delay="100" itemprop="event" itemscope
+                    itemtype="http://schema.org/MusicEvent">
                     <h2>Saturday </h2>
-                    <div class="event-img" id="sa-event-img" ></div><!-- data-aos="slide-right"-->
-                    <h1>Pop night</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat molestiae perferendis ipsam quos saepe libero repellendus magnam nihil error tenetur!</p>
-                    <p><span>When:</span>
-                        <br>Every Saturday between 9-11pm</p>
+                    <div class="event-img" id="sa-event-img"></div><!-- data-aos="slide-right"-->
+                    <h1 itemprop="name">Pop night</h1>
+                    <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span
+                            itemprop="performer">Kortana </span>Quaerat molestiae perferendis ipsam
+                        quos saepe libero repellendus magnam nihil error tenetur!</p>
+                    <p><span itemprop="startTime" content="T21:00">When:</span>
+                        <br itemprop="duration" content="PT2H">Every Saturday between 9-11pm</p>
                 </div>
-                <div class="event-card su-event" data-aos="fade-left" data-aos-delay="100">
+                <div class="event-card su-event" data-aos="fade-left" data-aos-delay="100" itemprop="event" itemscope
+                    itemtype="http://schema.org/MusicEvent">
                     <h2>Sunday </h2>
-                    <div class="event-img" id="su-event-img" ></div><!--data-aos="slide-right"-->
-                    <h1>Whatever night</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat molestiae perferendis ipsam quos saepe libero repellendus magnam nihil error tenetur!</p>
-                    <p><span>When:</span>
-                        <br>Every Sunday between 9-11pm</p>
+                    <div class="event-img" id="su-event-img"></div>
+                    <!--data-aos="slide-right"-->
+                    <h1 itemprop="name">Whatever night</h1>
+                    <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span
+                            itemprop="performer">300 svini </span>Quaerat molestiae perferendis ipsam
+                        quos saepe libero repellendus magnam nihil error tenetur!</p>
+                    <p><span itemprop="startTime" content="T21:00">When:</span>
+                        <br itemprop="duration" content="PT2H">Every Sunday between 9-11pm</p>
                 </div>
             </div>
             <div class="gallery-top-img">
-             <img src="images/Contact/gallery-bottom-3.png" alt=""> 
-             </div>
-             
+                <img src="images/Contact/gallery-bottom-3.png" alt="">
+            </div>
+
             <div class="email-form-wrapper">
-               <div class="top-frame"></div>
+                <div class="top-frame"></div>
                 <div class="email-frame-img">
                     <h1>Join the family</h1>
                     <h2>& get Updates on upcoming events</h2>
@@ -118,9 +152,13 @@
                     <div id="about-frame-1">
                         <div id="about-frame-2">
                             <h1><span id="about">About</span> The Hebrides</h1>
-                            <h3><!--pub<span>&#x1F541;</span>bar-->Edinburgh bar</h3>
+                            <h3>
+                                <!--pub<span>&#x1F541;</span>bar-->Edinburgh bar</h3>
                             <h2>Our Story</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi earum voluptate cumque quas placeat repellat, possimus iste explicabo odio mollitia dolor ipsa officia necessitatibus. Quia error illum eum ipsa!</p>
+                            <p itemprop="ownershipFundingInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Asperiores sequi earum
+                                voluptate cumque quas placeat repellat, possimus iste explicabo odio mollitia dolor ipsa
+                                officia necessitatibus. Quia error illum eum ipsa!</p>
                             <div class="about-info">
                                 <div class="hours">
                                     <h4>Opening Hours</h4>
@@ -130,17 +168,23 @@
                                     <p>11am-1am</p>
                                     <p>Sun:</p>
                                     <p>12:30am-12pm</p>
+                                    <meta itemprop="openingHours" content="Mo-Th 11:00-00:00">
+                                    <meta itemprop="openingHours" content="Fr-Sa 11:00-01:00">
+                                    <meta itemprop="openingHours" content="Su 12:30-00:00">
                                 </div>
                                 <div class="address">
-                                    <h4>Address</h4>
-                                    <p>17 Market Steet</p>
-                                    <p>Edinburgh EH1 1DE</p>
-                                    <p>the.hebrides@gmail.com</p>
+                                    <h4 itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Address
+                                    </h4>
+                                    <p itemprop="streetAddress">17 Market Steet</p>
+                                    <p itemprop="addressLocality">Edinburgh <span itemprop="postalCode">EH1 1DE</span>
+                                    </p>
+                                    <p itemprop="email">the.hebrides@gmail.com</p>
                                 </div>
                             </div>
                             <form action="https://maps.google.com/maps" method="get" target="_blank">
                                 <input type="hidden" name="daddr" value="17 Market St, Edinburgh" />
-                                <input type="submit" value="Get directions" class="contact-btn" /> </form>
+                                <input type="submit" value="Get directions" class="contact-btn"
+                                    style="cursor: pointer" /> </form>
                         </div>
                     </div>
                 </div>
@@ -149,55 +193,94 @@
         <section class="sec4" id="sec4">
             <h1>&#xB7; Menu &#xB7;</h1>
             <h2>Whiskey Collection</h2>
-            <div class="menu-wrapper">
-                <div class="item-container" data-aos="fade-up" data-aos-delay="10"> <img src="images/Menu/Macallan3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Macallan</h3> </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="100"> <img src="images/Menu/Talisker3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Talisker</h3> </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="200"> <img src="images/Menu/Bunahabhaum3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Bunnahabhain</h3> </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="300"> <img src="images/Menu/Bowmore3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Bowmore</h3>
+            <div class="menu-wrapper" itemscope itemtype="https://schema.org/Menu https://schema.org/MenuSection">
+                <meta itemprop="description"
+                    content="menu list of the most popular ordered whiskey in the Hebrides bar Edinburgh">
+                <meta itemprop="name" content="Whiskey Collections">
+                <div class="item-container" data-aos="fade-up" data-aos-delay="10" itemscope
+                    itemtype="https://schema.org/hasMenuItem"> <img src="images/Menu/Macallan3.png" class="item-logo"
+                        alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Macallan</h3>
+                </div>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="100" itemscope
+                    itemtype="https://schema.org/hasMenuItem"emprop="hasMenuItem"> <img src="images/Menu/Talisker3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Talisker</h3>
+                </div>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="200" itemscope
+                    itemtype="https://schema.org/hasMenuItem"emprop="hasMenuItem"> <img src="images/Menu/Bunahabhaum3.png" class="item-logo"
+                        alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Bunnahabhain</h3>
+                </div>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="300" itemscope
+                    itemtype="https://schema.org/hasMenuItem"emprop="hasMenuItem"> <img src="images/Menu/Bowmore3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Bowmore</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="400"> <img src="images/Menu/Laphroaig3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Laphroaig</h3>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="400" itemscope
+                    itemtype="https://schema.org/hasMenuItem"emprop="hasMenuItem"> <img src="images/Menu/Laphroaig3.png" class="item-logo"
+                        alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Laphroaig</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="500"> <img src="images/Menu/Highland_park_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Highland Park</h3>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="500" itemscope
+                    itemtype="https://schema.org/hasMenuItem"emprop="hasMenuItem"> <img src="images/Menu/Highland_park_3.png" class="item-logo"
+                        alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Highland Park</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="100"> <img src="images/Menu/Glenmoranfie3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">GlenMorangie</h3>
+                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="100"
+                    itemscope
+                    itemtype="https://schema.org/hasMenuItem"> <img src="images/Menu/Glenmoranfie3.png"
+                        class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">GlenMorangie</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="200"> <img src="images/Menu/Glenfiddich3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Glenfiddich</h3>
+                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="200"
+                    itemprop="hasMenuItem" itemprop="hasMenuItem"> <img src="images/Menu/Glenfiddich3.png"
+                        class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Glenfiddich</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="300"> <img src="images/Menu/JW3.png" class="item-logo" alt="Johnney Walker logo">
-                    <h3 class="item-name">Johnney Walker</h3>
+                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="300"
+                    itemscope
+                    itemtype="https://schema.org/hasMenuItem"> <img src="images/Menu/JW3.png" class="item-logo"
+                        alt="Johnney Walker logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Johnney Walker</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="400"> <img src="images/Menu/Jameson3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Jameson</h3>
+                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="400"
+                    itemscope
+                    itemtype="https://schema.org/hasMenuItem"> <img src="images/Menu/Jameson3.png" class="item-logo"
+                        alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Jameson</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="500"> <img src="images/Menu/Lagavulin3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Lagavulin</h3>
+                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="500"
+                    itemscope
+                    itemtype="https://schema.org/hasMenuItem"> <img src="images/Menu/Lagavulin3.png"
+                        class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Lagavulin</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="100"> <img src="images/Menu/Dalmore3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Dalmore</h3>
+                <div class="item-container hidden-whiskey" data-aos="fade-up" data-aos-delay="100"
+                    itemscope
+                    itemtype="https://schema.org/hasMenuItem"> <img src="images/Menu/Dalmore3.png" class="item-logo"
+                        alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Dalmore</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container  hidden-whiskey" data-aos="fade-up" data-aos-delay="200"> <img src="images/Menu/JURA3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">JURA</h3>
+                <div class="item-container  hidden-whiskey" data-aos="fade-up" data-aos-delay="200"
+                    itemscope
+                    itemtype="https://schema.org/hasMenuItem"> <img src="images/Menu/JURA3.png" class="item-logo"
+                        alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">JURA</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container  hidden-whiskey" data-aos="fade-up" data-aos-delay="300"> <img src="images/Menu/JURA_Superstition_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">JURA Superstition</h3>
+                <div class="item-container  hidden-whiskey" data-aos="fade-up" data-aos-delay="300"
+                itemscope
+                itemtype="https://schema.org/hasMenuItem"> <img src="images/Menu/JURA_Superstition_3.png"
+                        class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">JURA Superstition</h3>
                     <p class="item-price"></p>
                 </div>
                 <div class="show-hide-wrrapper">
@@ -206,53 +289,68 @@
                 </div>
             </div>
             <h2>Beers</h2>
-            <div class="menu-wrapper">
-                <div class="item-container" data-aos="fade-up" data-aos-delay="10"> <img src="images/Menu/beers/Perroni_3.png" class="item-logo" alt="Johnney Walker logo">
-                    <h3 class="item-name">Peroni</h3>
+            <div class="menu-wrapper"  itemscope itemtype="https://schema.org/Menu https://schema.org/MenuSection">
+                <meta itemprop="description"
+                content="menu list of the most popular ordered beers in the Hebrides bar Edinburgh">
+            <meta itemprop="name" content="Beers">
+                <div class="item-container" data-aos="fade-up" data-aos-delay="10"> <img
+                        src="images/Menu/beers/Perroni_3.png" class="item-logo" alt="Johnney Walker logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Peroni</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="100"> <img src="images/Menu/beers/Guinness_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Guinness</h3>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="100"> <img
+                        src="images/Menu/beers/Guinness_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Guinness</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="200"> <img src="images/Menu/beers/Becks_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Beck`s</h3>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="200"> <img
+                        src="images/Menu/beers/Becks_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Beck`s</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="300"> <img src="images/Menu/beers/budweiser_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Budweiser</h3>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="300"> <img
+                        src="images/Menu/beers/budweiser_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Budweiser</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="400"> <img src="images/Menu/beers/Corona_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Corona</h3>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="400"> <img
+                        src="images/Menu/beers/Corona_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Corona</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container" data-aos="fade-up" data-aos-delay="500"> <img src="images/Menu/beers/Carling_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Carling</h3>
+                <div class="item-container" data-aos="fade-up" data-aos-delay="500"> <img
+                        src="images/Menu/beers/Carling_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Carling</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="100"> <img src="images/Menu/beers/Dark_Island_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Dark Island</h3>
+                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="100"> <img
+                        src="images/Menu/beers/Dark_Island_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Dark Island</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="200"> <img src="images/Menu/beers/Deuchars_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Deuchars</h3>
+                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="200"> <img
+                        src="images/Menu/beers/Deuchars_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Deuchars</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="300"> <img src="images/Menu/beers/Strongbow_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Strongbow</h3>
+                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="300"> <img
+                        src="images/Menu/beers/Strongbow_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Strongbow</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="400"> <img src="images/Menu/beers/Miller3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Miller</h3>
+                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="400"> <img
+                        src="images/Menu/beers/Miller3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Miller</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="10"> <img src="images/Menu/beers/STella_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Stella</h3>
+                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="10"> <img
+                        src="images/Menu/beers/STella_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Stella</h3>
                     <p class="item-price"></p>
                 </div>
-                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="100"> <img src="images/Menu/beers/Tennents_3.png" class="item-logo" alt="Jamiesons logo">
-                    <h3 class="item-name">Tennent`s</h3>
+                <div class="item-container hidden-beer" data-aos="fade-up" data-aos-delay="100"> <img
+                        src="images/Menu/beers/Tennents_3.png" class="item-logo" alt="Jamiesons logo" itemprop="photo">
+                    <h3 class="item-name" itemprop="name">Tennent`s</h3>
                     <p class="item-price"></p>
                 </div>
                 <div class="show-hide-wrrapper">
@@ -261,19 +359,28 @@
                 </div>
             </div>
             <h2>Wine Collection</h2>
-            <div class="menu-wrapper">
+            <div class="menu-wrapper" itemscope itemtype="https://schema.org/Menu https://schema.org/MenuSection">
+                <meta itemprop="description"
+                content="menu list of the most popular ordered wines in the Hebrides bar Edinburgh">
+            <meta itemprop="name" content="Wine Collection">
                 <div class="item-container" data-aos="fade-down-right" data-aos-delay="100">
-                    <h3 class="item-name">Sauvignon Blanc</h3> </div>
+                    <h3 class="item-name" itemprop=name>Sauvignon Blanc</h3>
+                </div>
                 <div class="item-container" data-aos="fade-down-right" data-aos-delay="200">
-                    <h3 class="item-name">Chardonay Blanc</h3> </div>
+                    <h3 class="item-name" itemprop=name>Chardonay Blanc</h3>
+                </div>
                 <div class="item-container" data-aos="fade-down-right" data-aos-delay="300">
-                    <h3 class="item-name">Pinot Grigio</h3> </div>
+                    <h3 class="item-name" itemprop=name>Pinot Grigio</h3>
+                </div>
                 <div class="item-container" data-aos="fade-down-right" data-aos-delay="400">
-                    <h3 class="item-name">Zinfandel Rose</h3> </div>
+                    <h3 class="item-name" itemprop=name>Zinfandel Rose</h3>
+                </div>
                 <div class="item-container" data-aos="fade-down-right" data-aos-delay="500">
-                    <h3 class="item-name">Shiraz Red</h3> </div>
+                    <h3 class="item-name" itemprop=name>Shiraz Red</h3>
+                </div>
                 <div class="item-container" data-aos="fade-down-right" data-aos-delay="600">
-                    <h3 class="item-name">Merlot Red</h3> </div>
+                    <h3 class="item-name" itemprop=name>Merlot Red</h3>
+                </div>
                 <div class="show-hide-wrrapper">
                     <button id="show-hide-btn-wine">&#11163; Show more &#11163;</button>
                     <div class="show-hide-line"></div>
@@ -282,58 +389,60 @@
         </section>
         <section class="sec5" id="sec5">
             <div class="gallery-top-img"><img src="images/Contact/gallery-top-3.png" alt=""></div>
-            <div class="gallery-wrapper">
+            <div class="gallery-wrapper" itemscope itemtype="https://schema.org/ImageGallery">
                 <div class="img-container-1">
-                    <div class="gallery-header" data-parallax="scroll" data-image-src="images/collage-delete.JPG" data-z-index="0"><!--parallax-->
-                       <img src="images/Gallery/collage-delete.JPG" class="gallery-img">
-                        <h1>The Hebrides Gallery</h1>
+                    <div class="gallery-header" data-parallax="scroll" data-image-src="images/collage-delete.JPG"
+                        data-z-index="0">
+                        <!--parallax-->
+                        <img src="images/Gallery/collage-delete.JPG" class="gallery-img">
+                        <h1 itemprop="name">The Hebrides Gallery</h1>
                         <p>The fondest memories are made around the table</p>
                     </div>
                 </div>
                 <div class="img-container-2">
-                    <a href="images/5489_pic5489-2.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/5489_pic5489-2.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-3">
-                    <a href="images/edinburgh%20pub.png" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/edinburgh%20pub.png" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-4">
-                    <a href="images/pub_edinburgh.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/pub_edinburgh.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-5">
-                    <a href="images/Gallery/11.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/11.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-6">
-                    <a href="images/live-musik-im-the-hebrides.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/live-musik-im-the-hebrides.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-7">
-                    <a href="images/Gallery/10.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/10.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-8">
-                    <a href="images/Gallery/9.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/9.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-9">
-                    <a href="images/Gallery/1.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/1.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-10">
-                    <a href="images/Gallery/2.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/2.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-11">
-                    <a href="images/Gallery/3.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/3.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-12">
-                    <a href="images/Gallery/4.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/4.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-13">
-                    <a href="images/Gallery/5.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/5.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-14">
-                    <a href="images/Gallery/6.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/6.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-15">
-                    <a href="images/Gallery/7.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/7.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
                 <div class="img-container-16">
-                    <a href="images/Gallery/8.jpg" data-lightbox="gallery1" class="img-link"></a>
+                    <a href="images/Gallery/8.jpg" data-lightbox="gallery1" class="img-link" itemprop="photo"></a>
                 </div>
             </div>
             <div class="gallery-top-img"><img src="images/Contact/gallery-bottom-3.png" alt=""></div>
@@ -346,13 +455,15 @@
                         <h2 class="call-header">Call us</h2>
                         <a href="tel:0885054496">
                             <div class="tel-icon"></div>
-                        </a> <a href="tel:0885054496">+77 54115968</a> </div>
+                        </a> <a href="tel:0885054496" itemprop="telephone">+77 54115968</a>
+                    </div>
                     <div class="fw">
                         <h2>Follow us</h2>
                         <a href="https://www.facebook.com/Hebrides-Bar-556954254447827/" target="_blank">
                             <div class="fb-icon"></div>
                         </a>
-                        <a href="https://www.youtube.com/results?search_query=the+hebrides+bar+edinburgh" target="_blank">
+                        <a href="https://www.youtube.com/results?search_query=the+hebrides+bar+edinburgh"
+                            target="_blank">
                             <div class="youtube-icon"></div>
                         </a>
                     </div>
@@ -364,7 +475,8 @@
                         <br>
                         <input type="email" name="email" class="contact-attr" placeholder="* E-mail" required>
                         <br>
-                        <textarea name="email-massage" id="massage" cols="30" rows="10" class="contact-attr" placeholder="* Massage" required></textarea>
+                        <textarea name="email-massage" id="massage" cols="30" rows="10" class="contact-attr"
+                            placeholder="* Massage" required></textarea>
                         <input type="submit" class="contact-attr submit" id="send" value="">
                         <label for="send" id="send-label">Send</label>
                     </form>
@@ -373,36 +485,39 @@
                     <h2>Come in for a drink</h2>
                     <p>The Hebrides bar is located at</p>
                     <p>Market Street 17</p>
-                    <p>Edinburgh, Scotland</p> <a href="https://www.google.com/maps?daddr=17+Market+St,+Edinburgh" target="_blank">Get directions</a> </div>
+                    <p>Edinburgh, Scotland</p> <a href="https://www.google.com/maps?daddr=17+Market+St,+Edinburgh"
+                        target="_blank">Get directions</a>
+                </div>
             </div>
         </section>
     </main>
-    <footer><p>&copy; 2018 All Rights Reserved.</p></footer>
+    <footer>
+        <p>&copy; 2018 All Rights Reserved.</p>
+    </footer>
     <script type="text/javascript">
         /* ------------------ PAGE LOADING -----------------------------*/
-        window.addEventListener("load", function(){
+        window.addEventListener("load", function () {
             var load_screen = document.getElementById("load-screen");
             document.body.removeChild(load_screen);
         });
-        
-        
+
+
         /* ------------------ NAVIGATION BAR -----------------------------*/
         $(window).scroll(function () {
             var num = $('.sec2').offset().top;
             var scroll = $(window).scrollTop();
             if (scroll >= (num - 100)) {
                 $("nav").addClass("black-nav");
-            }
-            else {
+            } else {
                 $("nav").removeClass("black-nav");
             }
             /* ------------------- EVENT CARD TOGGLING -----------------------*/
             $(".event-card").each(function () {
-                if (scroll >= $(this).offset().top - 300) { /*&& $(window).width() < 760*/
+                if (scroll >= $(this).offset().top - 300) {
+                    /*&& $(window).width() < 760*/
                     $(this).css("filter", "grayscale(10%) blur(0px)");
                     $(this).prev().css("filter", "grayscale(30%) blur(.7px)");
-                }
-                else {
+                } else {
                     $(this).css("filter", "grayscale(30%) blur(.7px)");
                 }
             });
@@ -412,13 +527,13 @@
         $('.parallax-window').parallax({
             imageSrc: 'images/about/map2.jpg'
         });
-        
+
         AOS.init({
-            offset: 5
-            , duration: 500
-            , easing: 'ease-in-sine'
-            , delay: 100
-        , });
+            offset: 5,
+            duration: 500,
+            easing: 'ease-in-sine',
+            delay: 100,
+        });
         /*   --------------- SHOW HIDE MENU ITEMS ---------------------- */
         $('.hidden-whiskey').hide();
         $('.hidden-beer').hide();
@@ -426,8 +541,7 @@
             $('.hidden-whiskey').slideToggle();
             if ($(this).text() == "\u2B99 Show Less \u2B99") {
                 $(this).text("\u2b9b Show more \u2b9b");
-            }
-            else {
+            } else {
                 $(this).text("\u2B99 Show Less \u2B99");
             };
         });
@@ -435,8 +549,7 @@
             $('.hidden-beer').slideToggle();
             if ($(this).text() == "\u2B99 Show Less \u2B99") {
                 $(this).text("\u2b9b Show more \u2b9b");
-            }
-            else {
+            } else {
                 $(this).text("\u2B99 Show Less \u2B99");
             };
         });
