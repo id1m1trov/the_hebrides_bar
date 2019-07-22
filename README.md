@@ -7,4 +7,6 @@ The Hebrides Bar Edinburgh
 
  responsive design made by using css grid 
 
- Shema.org typed in with Microdata (witch make the HTML hard to read... next time - JSON-LD (; )
+ Shema.org typed in with Microdata 
+ 
+ https://id1m1trov.github.io/thehebridesbar/
